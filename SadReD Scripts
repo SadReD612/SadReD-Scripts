@@ -1,0 +1,60 @@
+-- Instances:
+
+local Test = Instance.new("ScreenGui")
+local Background = Instance.new("Frame")
+local Name = Instance.new("TextLabel")
+local UICorner = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+
+--Properties:
+
+Test.Name = "Test"
+Test.Parent = game.Workspace
+Test.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Background.Name = "Background"
+Background.Parent = Test
+Background.BackgroundColor3 = Color3.fromRGB(143, 143, 143)
+Background.Position = UDim2.new(0.286096245, 0, 0.264890283, 0)
+Background.Size = UDim2.new(0, 314, 0, 302)
+Background.Draggable = true
+
+Name.Name = "Name"
+Name.Parent = Background
+Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name.BackgroundTransparency = 1.000
+Name.Position = UDim2.new(0.189176619, 0, -7.49714673e-05, 0)
+Name.Size = UDim2.new(0, 200, 0, 50)
+Name.Font = Enum.Font.SourceSans
+Name.Text = "SadReD"
+Name.TextColor3 = Color3.fromRGB(170, 0, 0)
+Name.TextScaled = true
+Name.TextSize = 14.000
+Name.TextWrapped = true
+
+UICorner.Parent = Background
+
+TextButton.Parent = Background
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
+TextButton.Position = UDim2.new(0.191082805, 0, 0.41390729, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "JailScript"
+TextButton.TextColor3 = Color3.fromRGB(0, 255, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+TextButton.MouseButton1Click:Connect(function()
+	if Background.Visible == false then
+		Background.Visible = true
+	else
+		Background.Visible = false
+	end
+end)
+UICorner_2.Parent = TextButton
+--Scripts
+
+TextButton.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Jailbreak/Jailbreak"))()
+end)
